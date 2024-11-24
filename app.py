@@ -165,7 +165,7 @@ def extract_parameters(user_input):
 # Function to generate SQL
 def get_sql_from_model(user_input):
     try:
-        openai.api_key = OPENAI_API_KEY
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
         few_shot_prompt = "\n".join(
             [f"User Question: {ex['question']}\nSQL Query: {ex['sql']}" for ex in few_shot_examples]
         )
@@ -198,7 +198,7 @@ def fetch_data_from_csv(query, df):
 
 def generate_analysis(df):
     try:
-        openai.api_key = OPENAI_API_KEY
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
         prompt = (
             "Here is a dataset:\n\n" + df.head(10).to_string(index=False) +
             "\n\nGenerate a concise analysis of key insights from this data."
