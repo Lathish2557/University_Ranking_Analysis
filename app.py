@@ -19,7 +19,7 @@ st.set_page_config(
 # Add a sidebar for navigation
 with st.sidebar:
     st.title("🎓 University Ranking Chatbot")
-    st.markdown("This app helps you to find university rankings and different  for the years 2011 to 2016 and generate insights.")
+    st.markdown("This application helps to analyze university rankings and identify top-performing institutions from 2011 to 2016.")
     st.image("data/logo.jpg", use_container_width=True)
     st.write("Developed by Lathish (https://github.com/Lathish2557)")
 # Apply custom CSS for styling
